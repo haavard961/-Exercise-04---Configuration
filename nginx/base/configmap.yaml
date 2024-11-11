@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html
+data:
+  index.html: |
+    <html>
+    <body>
+      <h1>Default NGINX Page</h1>
+      <p>This is a placeholder page.</p>
+    </body>
+    </html>
