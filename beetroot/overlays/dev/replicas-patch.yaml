@@ -1,0 +1,6 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beetroot  # Ensure this matches the name of your Deployment in the base
+spec:
+  replicas: 2  # Sets the number of replicas to 2
