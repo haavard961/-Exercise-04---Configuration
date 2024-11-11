@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beetroot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: beetroot
+  template:
+    metadata:
+      labels:
+        app: beetroot
+    spec:
+      containers:
+        - name: beetroot
+          image: registry.internal.uia.no/ikt210-g-24h-skyinfrastruktur/labgroup19/exercise-02-deploy-your-first-k8s-manifest
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: my-registry-secret
+
