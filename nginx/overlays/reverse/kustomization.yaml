@@ -1,0 +1,9 @@
+resources:
+  - ../../base
+  - service.yaml
+
+configMapGenerator:
+  - name: nginx-config
+    behavior: replace
+    files:
+      - nginx.conf

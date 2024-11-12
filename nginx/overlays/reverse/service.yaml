@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: beetroot-service
+spec:
+  selector:
+    app: beetroot
+  ports:
+    - protocol: TCP
+      port: 8080         # Service port for beetroot
+      targetPort: 8080 # Target port where beetroot listens
+  type: ClusterIP
