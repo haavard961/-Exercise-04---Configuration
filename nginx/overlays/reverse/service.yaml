@@ -10,3 +10,20 @@ spec:
       port: 8080         # Service port for beetroot
       targetPort: 8080 # Target port where beetroot listens
   type: ClusterIP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  labels:
+    name: nginx-service
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      nodePort: 30080
+      name: http
+  selector:
+    name: nginx
